@@ -1,0 +1,86 @@
+1.Installation:
+ Things that need to be taken care while Installing Jenkins.Incase of EC2 -> edit SG to allow inbound and outbound on port 8080/any othe rport that you use.
+ Troubleshoot the Issue by understanding. 
+2.SetUp:
+ In order to Docker as Build Agent(Slave), We need to install Docker in Master Node, 
+ If Facing Issue "Failed to connect to repository : Error performing git command: git ls-remote -h https://github.com/xx/yy", should install git on master node.
+
+In a Jenkins setup, for example, the Jenkins server connects to a Docker host(It is not a best practise to use Jenkins Master Node, we should have a Slave Node(VM, EC2 having Docker Installed) to spin up build agent containers. The Docker host could be any OS that supports Docker. The Jenkins master connects to the Docker host using REST APIs, so the remote API for the Docker host needs to be enabled2.
+!! A new VM is spun up and Docker is installed on it.
+The Docker service file is opened and configured to enable the remote API.
+The Docker service is reloaded and restarted.
+The API is validated by executing curl commands.
+
+Install  Docker Pipeline Plugin to use as Build Agent, after configuring above requirements.
+
+
+3.Concepts 
+A. Understand the Difference between Freestyle and Pipeline.
+B. Building Pipeline on Jenkins from Web UI or by using JenkinsFile(Best Practise)
+Creating a Jenkinsfile and committing it to source control provides a number of immediate benefits:
+1. Automatically creates a Pipeline build process for all branches and pull requests.
+2. Code review/iteration on the Pipeline (along with the remaining source code).
+3. Audit trail for the Pipeline.
+4. Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.
+
+!! A Jenkinsfile can be written using two types of syntax - Declarative and Scripted.
+--> Declarative Pipeline is a more recent feature of Jenkins Pipeline which provides richer syntactical features over Scripted Pipeline syntax, andis designed to make writing and reading Pipeline code easier.
+
+Pipeline code skeleton.
+Understand the Terminalogy of Words that will be used in Scirpt first.
+Pipeline: A Pipeline’s code defines your entire build process, which typically includes stages for building an application, testing it and then delivering it.
+Node: Is a Machine which is part of jenkins arch/env which is intended to execute/used to run pipelines
+Stage:is a subset of tasks performed through the entire Pipeline. It includes build,test and deploy stages
+Step: is uswed to tell jenkins to perform a particular task in execution of Jenkins File, like sh "mkdir new-folder for logs" to execute command to store logs of Docker Deployment.
+
+
+In "Declarative Pipeline syntax", the pipeline block defines all the work done throughout your entire Pipeline.
+Syntax:
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                //
+            }
+        }
+        stage('Test') {
+            steps {
+                //
+            }
+        }
+        stage('Deploy') {
+            steps {
+                //
+            }
+        }
+    }
+}
+
+Scripted Pipeline - Shortcut to remember NSSx   
+node {
+    stage "a"{
+        steps //
+    }
+    stage "b"{
+        steps //
+    }
+    stage "c"{
+        steps //
+    }
+}
+
+pipeline: This is the start of the pipeline script. 
+agent any: This tells Jenkins to allocate any available agent to execute the pipeline.
+stages: This is where you define all the stages that your pipeline will have.
+stage('Stage Name'): This is where you define a single stage. Replace 'Stage Name' with the name of your stage.
+steps: This is where you define the steps that will be executed in the current stage. Replace // Your commands here with your actual commands.
+
+Shortcut to Remember, PASSS - Pipeline Block, Angent Line, Stages Block, Stage Block and Steps Block
+
+Weebhook Integration 
+4.Short Notes
+5.Troubleshooting 
+6.Interview Q&A
+
+
