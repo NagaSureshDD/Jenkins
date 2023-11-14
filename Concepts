@@ -1,8 +1,8 @@
 1.Installation:
- Things that need to be taken care while Installing Jenkins.Incase of EC2 -> edit SG to allow inbound and outbound on port 8080/any othe rport that you use.
- Troubleshoot the Issue by understanding. 
+ Things that need to be taken care while Installing Jenkins.Incase of EC2 -> edit SG to allow inbound and outbound on port 8080/any other port that you use.
+ Troubleshoot the Issue by understanding.
 2.SetUp:
- In order to Docker as Build Agent(Slave), We need to install Docker in Master Node, 
+ In order to use Docker as Build Agent(Slave), We need to install Docker in Master Node, 
  If Facing Issue "Failed to connect to repository : Error performing git command: git ls-remote -h https://github.com/xx/yy", should install git on master node.
 
 In a Jenkins setup, for example, the Jenkins server connects to a Docker host(It is not a best practise to use Jenkins Master Node, we should have a Slave Node(VM, EC2 having Docker Installed) to spin up build agent containers. The Docker host could be any OS that supports Docker. The Jenkins master connects to the Docker host using REST APIs, so the remote API for the Docker host needs to be enabled2.
@@ -24,7 +24,7 @@ Creating a Jenkinsfile and committing it to source control provides a number of 
 4. Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.
 
 !! A Jenkinsfile can be written using two types of syntax - Declarative and Scripted.
---> Declarative Pipeline is a more recent feature of Jenkins Pipeline which provides richer syntactical features over Scripted Pipeline syntax, andis designed to make writing and reading Pipeline code easier.
+--> Declarative Pipeline is a more recent feature of Jenkins Pipeline which provides richer syntactical features over Scripted Pipeline syntax, and is designed to make writing and reading Pipeline code easier.
 
 Pipeline code skeleton.
 Understand the Terminalogy of Words that will be used in Scirpt first.
