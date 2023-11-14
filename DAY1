@@ -1,0 +1,31 @@
+Maven 
+Videos to understand 
+1. https://youtube.com/shorts/ssZbVE6UeiY?si=FswIuLC5LHN1uaC1
+2. https://www.youtube.com/watch?v=Xatr8AZLOsE&pp=ygUGTWF2ZW4g
+3. 
+Q&A to Learn.
+1. What is Maven?
+2. What Challenges it is solving in Software Ecosystem? 
+3. Why it is used and where it is used? For Java Related Projects.
+4. key Components of Maven? Maven Life Cycle that builds the Project into executable WAR/JAR File.
+5. How it can be integrated with Jenkins? At What Stage it will be included generally?
+6. other tools apart from maven which are popular in market? Gradle. And for Python People use DepHell from Bing AI.
+
+Concepts:
+
+
+
+Project Ideas:
+
+Theory:
+#Maven is a Build Automation and Project Management Tool.Maven Life Cycle and Structure of a java Project. Any Java Based Project will have 2 imp files.They are
+1.src/main folder which contains source code of Project 2.pom.xml file - contains properties, extended Plugins and Additional Libraries required for Project.
+
+#In order to Package the application, will execute different maven cmds and if fetches jar file of specific dependencies. If asked what plugins does pom file have say, compiler plugin and other required plugins to execute the code.
+
+#We have 3 Stages in Maven Life Cycle. They are 
+Clean LifeCycle 
+Default LifeCycle(DL) - DevOps Engineers basically work on/with Default LifeCycle. Steps in "DL" are validate, compile , test , package ,install and deploy.
+Site LifeCycle
+
+above mentioned steps will be executed as commands. eg: mvn validate , ,mvn compile and mvn test
