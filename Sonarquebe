@@ -1,0 +1,20 @@
+"Sonarquebe" 
+Even before understanding what is Sonarquebe? Try to Understand the Term DevSecOps.
+We know DevOps is SD LifeCycle which emphasis on Delivering the Product/Application to faster in a very quick time.When you have issues with Security, Source Code, Pipeline etc we incur some security tools to make it more secure.This Extension of Devops with different security tools is called DevSecOps 
+
+So What Sonarquebe Does?Why it is most used?
+Has 2 Imp Functionalities.
+1. Code Coverage - Percentage or Amount of Score Code that is tested. Eg:Every Organization wokring with Sonarquebe will look for alleast 80% Code Coverage by Sonarquebe.
+2. Code Quality Check - It used to find Bugs(May cause an issue/Application Breakdown),Vulnarabiities(working but open to bypass and attack)and Code Smell.
+
+It is most used as it is compatible to perform analysis on code for any programming language.
+
+2 Version of Sonarquebe 
+Community Version 
+Developer Version 
+
+In order to get code coverage after analysis, need to use jacoco extension in pom file. 
+So that we will be able to get the code coverage of source code.
+
+
+
