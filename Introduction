@@ -1,0 +1,18 @@
+CI/CD 
+Continuous Integration and Continuous Delivery( When Deployment Process needs an Approval)
+Continuous Deployment( Most Probably Defined as Automatic Deployment without any Approvals)
+
+A Process which Involves Mutiple Stages/Steps that need to be performed inorder to test and deploy an application code.
+Stages involve Pulling Updated Code from SCM, Performing Different types of Test(Involves Testing Tools), Generating Reports, Building Artifacts,Adding Dependencies ,Deploying into Docker/Kubernetes etc.
+
+In order to Automate above all Process, we are using CI/CD Tools.
+Pipeline provides an extensible set of tools for modeling simple-to-complex delivery pipelines "as code" via the Pipeline domain-specific language (DSL) syntax. 
+Tools most used in Market are Jenkins, AgroCD, razaropsCD etc..
+
+Main focus will be on Jenkins.
+RoadMap: 
+ 1. Understand the Architecture of Jenkins( Master & Slave Nodes Diagram)
+ 2. Deep Dive into the Concept of Pipelines ( Different types of Pipelines,Syntax, Jenkinsfile for Pipeline etc )
+ 3. Build Pipelines from Scratch (Eg: Stage 1 SCM Checkout - Pipeline should look for Changes/Commits into Target Repo and Pull them, Stage 2: Any Testing Tool to Perform some testing, Stage 3: Deploy into Docker for Accessing from Web etc )
+ 4. Do Projects to Include in Resume( Checkout Best Projects to add value in Resume)
+ 
