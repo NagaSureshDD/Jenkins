@@ -84,3 +84,59 @@ Weebhook Integration
 6.Interview Q&A
 
 
+Shortcuts:
+PASSS
+pipeline {
+    agent any
+    stages{
+        stage "01"{
+            steps{
+                sh "x cmd"
+            }
+        }
+        stage "02"{
+            steps {
+                sh "y cmd"
+            }
+        }    
+    }
+}
+
+pipeline {
+    agent any 
+    stages {
+        stage "01"{
+            steps{
+                sh
+            }
+        }            
+        stage "02" {
+            steps{
+
+            }
+        }
+    }
+}
+
+pipeline {
+    agent any 
+    stages {
+        stage "a"{
+            steps{
+                sh a
+            }
+        }
+        stage "b"{
+            steps {
+                sh b
+            }
+        }
+        stage "c"{
+            steps{
+                sh c
+            }
+        }
+    }
+}   
+
+
